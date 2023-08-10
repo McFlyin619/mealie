@@ -5,6 +5,7 @@ ARG VARIANT="3.8-bullseye"
 FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 EXPOSE 8080
 
+ENV DEBIAN_FRONTEND=noninteractive
 
 # [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
 ARG NODE_VERSION="none"
@@ -40,4 +41,3 @@ RUN apt-get update \
     libsasl2-dev libldap2-dev libssl-dev \
     gnupg gnupg2 gnupg1
 #     && pip install -U --no-cache-dir pip
-ENV DEBIAN_FRONTEND=noninteractive
