@@ -38,3 +38,4 @@ RUN apt-get update \
     libsasl2-dev libldap2-dev libssl-dev \
     gnupg gnupg2 gnupg1
 #     && pip install -U --no-cache-dir pip
+ENV DEBIAN_FRONTEND=noninteractive
